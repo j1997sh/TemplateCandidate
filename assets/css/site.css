@@ -366,3 +366,56 @@ footer{padding:52px 0 24px;background:#061a34;color:#fff}.footer-grid{display:gr
   .inline-ask .btn{width:100%}
   .activity-item{grid-template-columns:70px 14px 1fr;gap:10px}
 }
+
+
+/* Homepage slimming + compact campaign links */
+.campaign-links-strip{
+  padding:34px 0;
+  background:var(--navy);
+}
+.campaign-links-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1px;
+  background:rgba(255,255,255,.18);
+}
+.campaign-link-card{
+  display:block;
+  min-height:120px;
+  padding:22px;
+  background:var(--navy);
+  color:#fff;
+  transition:background .18s ease;
+}
+.campaign-link-card:hover{
+  background:#103863;
+}
+.campaign-link-card strong{
+  display:block;
+  margin-bottom:7px;
+  font-size:22px;
+  line-height:1.05;
+}
+.campaign-link-card span{
+  display:block;
+  color:#c7d4e2;
+  font-size:14px;
+}
+
+/* Keep homepage signup CTA compact and readable */
+.hero-signup .btn{
+  min-width:110px;
+  white-space:nowrap;
+  padding-left:18px;
+  padding-right:18px;
+}
+
+@media(max-width:800px){
+  .campaign-links-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .hero-signup .btn{
+    width:100%;
+    white-space:normal;
+  }
+}
