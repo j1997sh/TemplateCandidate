@@ -1,0 +1,13 @@
+{
+  "html_pages": 68,
+  "news_articles": 15,
+  "event_pages": 15,
+  "campaign_pages": 15,
+  "js_valid": true,
+  "missing_internal_refs": 0,
+  "duplicate_ids": {},
+  "homepage_participation_poll": true,
+  "volunteer_choice_first": true,
+  "campaign_pages_with_momentum": 15,
+  "event_pages_with_type": 15
+}

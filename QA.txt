@@ -1,0 +1,9 @@
+{
+  "html_pages": 68,
+  "news_articles": 15,
+  "event_pages": 15,
+  "campaign_pages": 15,
+  "js_valid": true,
+  "missing_internal_refs": 0,
+  "duplicate_ids": {}
+}

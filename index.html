@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home | Joe Bloggs for Bloggs Town</title>
+<meta name="description" content="Joe Bloggs for Bloggs Town">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/data/areas.js"></script>
+</head><body><header class="site-header"><div class="container header-inner">
+<a class="brand-link" href="index.html"><span class="candidate-id">
+      <span class="candidate-roundel">JB</span>
+      <span class="candidate-text"><strong>Joe Bloggs</strong><small>Candidate for Bloggs Town</small></span>
+    </span></a>
+<nav class="nav"><a class="active" href="index.html">Home</a><a class="" href="about.html">About Joe</a><a class="" href="plan.html">My plan</a><a class="" href="area.html">Your area</a><a class="" href="campaigns.html">Campaigns</a><a class="" href="events.html">Events</a><a class="" href="news.html">News</a><a class="" href="tell-joe.html">Tell Joe</a></nav>
+<div class="header-actions"><a class="header-box volunteer" href="volunteer.html">Get involved</a><a class="header-box donate" href="donate.html">Donate</a></div>
+<button class="menu-button" id="menuButton" type="button" aria-expanded="false">Menu</button>
+</div></header>
+<div class="local-status" id="localStatus"><div class="container local-status-inner"><div>Showing campaign updates for <strong id="localStatusName"></strong></div><div class="local-status-actions"><a href="area.html">Change area</a><button id="clearArea" type="button">×</button></div></div></div>
+<div class="mobile-nav" id="mobileNav"><nav><a href="index.html">Home</a><a href="about.html">About Joe</a><a href="plan.html">My plan</a><a href="area.html">Your area</a><a href="campaigns.html">Campaigns</a><a href="events.html">Events</a><a href="news.html">News</a><a href="tell-joe.html">Tell Joe</a></nav><div class="mobile-nav-actions"><a class="header-box volunteer" href="volunteer.html">Get involved</a><a class="header-box donate" href="donate.html">Donate</a></div></div>
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=2200&q=88')"><div class="container hero-inner"><div class="hero-content"><h1>Let’s change Bloggs Town together.</h1><p class="hero-copy">Joe Bloggs is standing to be your next MP — but this campaign is being built with the people who live here. Tell Joe what matters, help shape the plan and be part of the team that can win.</p><div class="hero-actions"><a class="btn" href="tell-joe.html">Tell Joe what matters</a><a class="btn white" href="volunteer.html">Join the campaign</a></div><form class="hero-signup" data-demo-form="signup" data-thanks="sign-up-thanks.html"><input name="first_name" placeholder="First name"><input name="last_name" placeholder="Last name"><input type="email" name="email" placeholder="Email address" required><input name="postcode" placeholder="Postcode"><button class="btn" type="submit">Be part of the campaign</button></form></div></div></section>
+<section class="ribbon"><div class="container ribbon-inner"><div><h2>Joe in your area</h2><p>Enter your postcode to see local news, campaigns and events.</p></div><div><form class="area-form" data-area-form><input placeholder="Enter your postcode or town"><button class="btn" type="submit">Find my area</button></form><div class="area-note">Template postcodes: BG1, BG2, BG3, BG4 or BG5.</div></div></div></section>
+<section class="personalised-section" id="homeLocalBlock"><div class="container"><div class="section-head"><div><h2>Your area: <span data-area-name></span></h2><p class="lead">One local story, one campaign, one event and one priority.</p></div><a class="btn navy" id="homeAreaHubLink" href="area.html">See everything in <span data-area-name></span></a></div><div class="home-local-grid-4"><article class="card"><div class="card-image" id="localStoryImage"></div><div class="card-body"><h3 id="localStoryTitle"></h3><p id="localStoryText"></p><a class="btn navy" id="localStoryLink">Read more</a></div></article><article class="card"><div class="card-image" id="localCampaignImage"></div><div class="card-body"><h3 id="localCampaignTitle"></h3><p id="localCampaignText"></p><a class="btn navy" id="localCampaignLink">View campaign</a></div></article><article class="card"><div class="card-image" id="localEventImage"></div><div class="card-body"><h3 id="localEventTitle"></h3><p id="localEventText"></p><a class="btn navy" id="localEventLink">View event</a></div></article><article class="card"><div class="card-image" id="localPolicyImage"></div><div class="card-body"><h3 id="localPolicyTitle"></h3><p id="localPolicyText"></p><a class="btn navy" id="localPolicyLink">Read the plan</a></div></article></div></div></section>
+<section class="section"><div class="container two-col">
+<div class="photo ratio" style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=88')"></div>
+<div><h2>This campaign starts with listening.</h2>
+<p class="lead">Joe is standing because Bloggs Town deserves a stronger voice — but the priorities should be built with the people who live and work here.</p>
+<p>Tell Joe what you think needs to change, what should come first and what you want your next MP to fight for.</p>
+<a class="btn" href="tell-joe.html">Have your say</a></div></div></section>
+<section class="participation-strip">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Help build the campaign</h2>
+        <p class="lead">Three quick ways to shape what Joe does next.</p>
+      </div>
+    </div>
+    <div class="participation-grid">
+      <article class="participation-card">
+        <h3>What should Joe fight for first?</h3>
+        <p>Choose the issue that should be at the top of the campaign agenda.</p>
+        <div class="quick-poll" data-quick-poll>
+          <button type="button" data-value="health">Better local healthcare</button>
+          <button type="button" data-value="safety">Safer streets</button>
+          <button type="button" data-value="roads">Fixing our roads</button>
+          <button type="button" data-value="business">Backing local business</button>
+        </div>
+        <p class="quick-poll-result" data-quick-poll-result>Thanks — you’ve helped shape Joe’s campaign priorities.</p>
+      </article>
+      <article class="participation-card">
+        <h3>Join something near you</h3>
+        <p>Campaign days, listening events and public meetings are happening across Bloggs Town.</p>
+        <a class="btn navy" href="events.html">Find an event</a>
+      </article>
+      <article class="participation-card">
+        <h3>Give an hour</h3>
+        <p>Deliver a few leaflets, knock on doors, help online or use your professional skills.</p>
+        <a class="btn navy" href="volunteer.html">Choose how to help</a>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section navy"><div class="container"><div class="section-head"><div><h2>Help build Joe’s plan for Bloggs Town</h2><p class="lead">Here’s what Joe has heard so far. Tell him what should come first.</p></div><a class="btn white" href="plan.html">See the full plan</a></div><div class="grid-4"><a class="image-card" href="plan-healthcare.html" style="background-image:url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1600&q=88')"><h3>Better local healthcare</h3><p>Fight for easier access to GPs, dentists and local NHS services.</p></a><a class="image-card" href="plan-safer-streets.html" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=88')"><h3>Safer streets</h3><p>Back neighbourhood policing and practical action on antisocial behaviour.</p></a><a class="image-card" href="plan-roads.html" style="background-image:url('https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1600&q=88')"><h3>Fixing our roads</h3><p>Push for better roads, reliable transport and less congestion.</p></a><a class="image-card" href="plan-business.html" style="background-image:url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=88')"><h3>Backing local business</h3><p>Support the high street, local employers and community investment.</p></a></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><h2>Campaigning across Bloggs Town</h2><p class="lead">Current campaigns you can back.</p></div><a class="btn navy" href="campaigns.html">All campaigns</a></div><div class="grid-3"><article class="card"><div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1600&q=88')"></div><div class="card-body"><h3>Protect local services in Bloggs Town Centre</h3><p>Back Joe’s campaign to protect and improve the services people rely on.</p><a class="btn navy" href="campaigns/town-centre-protect-local-services-in-bloggs-town-centre.html">Back campaign</a></div></article><article class="card"><div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1600&q=88')"></div><div class="card-body"><h3>Protect local services in North Bloggs</h3><p>Back Joe’s campaign to protect and improve the services people rely on.</p><a class="btn navy" href="campaigns/north-bloggs-protect-local-services-in-north-bloggs.html">Back campaign</a></div></article><article class="card"><div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1600&q=88')"></div><div class="card-body"><h3>Protect local services in Little Bloggs</h3><p>Back Joe’s campaign to protect and improve the services people rely on.</p><a class="btn navy" href="campaigns/little-bloggs-protect-local-services-in-little-bloggs.html">Back campaign</a></div></article></div></div></section>
+<section class="section alt"><div class="container"><div class="section-head"><div><h2>Latest from the campaign</h2><p class="lead">Visits, local stories and campaign updates.</p></div><a class="btn navy" href="news.html">All news</a></div><div class="grid-3"><article class="card"><div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1600&q=88')"></div><div class="card-body"><h3>Joe sets out a local plan for Bloggs Town Centre</h3><p>Residents in Bloggs Town Centre are helping shape the priorities Joe will fight for if elected.</p><a class="btn navy" href="news/joe-sets-out-a-local-plan-for-bloggs-town-centre.html">Read story</a></div></article><article class="card"><div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1600&q=88')"></div><div class="card-body"><h3>Joe sets out a local plan for North Bloggs</h3><p>Residents in North Bloggs are helping shape the priorities Joe will fight for if elected.</p><a class="btn navy" href="news/joe-sets-out-a-local-plan-for-north-bloggs.html">Read story</a></div></article><article class="card"><div class="card-image" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=88')"></div><div class="card-body"><h3>Joe sets out a local plan for Little Bloggs</h3><p>Residents in Little Bloggs are helping shape the priorities Joe will fight for if elected.</p><a class="btn navy" href="news/joe-sets-out-a-local-plan-for-little-bloggs.html">Read story</a></div></article></div></div></section>
+<footer><div class="container"><div class="footer-grid">
+<div><span class="candidate-id">
+      <span class="candidate-roundel">JB</span>
+      <span class="candidate-text"><strong>Joe Bloggs</strong><small>Candidate for Bloggs Town</small></span>
+    </span><p>A local parliamentary campaign for Bloggs Town.</p></div>
+<div><h4>Joe</h4><a href="about.html">About Joe</a><a href="plan.html">My plan</a><a href="news.html">News</a><a href="tell-joe.html">Tell Joe</a></div>
+<div><h4>Campaign</h4><a href="area.html">Your area</a><a href="campaigns.html">Campaigns</a><a href="events.html">Events</a><a href="preferences.html">Email preferences</a></div>
+<div><h4>Get involved</h4><a href="volunteer.html">Volunteer</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+</div>
+<div class="footer-note">Joe Bloggs and Bloggs Town are fictional template content.</div>
+<div class="footer-legal">Promoted by [NAME] on behalf of Joe Bloggs, both at [ADDRESS].</div>
+</div></footer><script src="assets/js/site.js"></script></body></html>
