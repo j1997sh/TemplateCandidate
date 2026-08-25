@@ -55,5 +55,61 @@ function initCampaignBuilder(){
     });
   });
 }
-captureSource();initMobile();initAreas();initForms();initPreferences();initThanks();initQuickPolls();initCampaignBuilder();const area=getArea();if(area&&AREAS[area])applyArea(area);
+
+function initPinboard(){
+  const board=document.getElementById("localPinboard");
+  const form=document.getElementById("pinboardForm");
+  if(!board||!form)return;
+  const seeded={
+    "town-centre":[
+      ["Bring empty shops back into use","The high street needs more reasons to visit after 5pm.","Sarah"],
+      ["Sort out parking","Short visits should be easier for shoppers and local businesses.","David"],
+      ["Make the centre feel safer","More visible action on antisocial behaviour in the evening.","Maya"]
+    ],
+    "north-bloggs":[
+      ["More visible neighbourhood policing","People want to know who is responsible for recurring problems.","Tom"],
+      ["Protect the local bus","It is a lifeline for older residents and people without cars.","June"],
+      ["Fix the worst potholes","Some roads have been patched repeatedly without lasting repair.","Kieran"]
+    ],
+    "little-bloggs":[
+      ["Keep the village bus running","Losing it would make getting to work and appointments much harder.","Helen"],
+      ["Protect the GP service","Getting an appointment locally matters to everyone.","Aisha"],
+      ["Slow traffic through the centre","The main road feels unsafe at busy times.","Mark"]
+    ],
+    "east-bloggs":[
+      ["More apprenticeships","Young people need clearer routes into good local jobs.","Ben"],
+      ["Better road links","Congestion is making the commute harder every year.","Rachel"],
+      ["Support independent businesses","Small employers need a stronger voice.","Imran"]
+    ],
+    "the-villages":[
+      ["Keep rural bus links","People should not be forced to own a car to access basic services.","Sue"],
+      ["Protect village amenities","Losing shops and community spaces changes the character of a place.","John"],
+      ["Fix rural roads properly","Repeated patching is not enough.","Anna"]
+    ]
+  };
+  const area=getArea()||"town-centre";
+  function getPins(){
+    let stored=[];
+    try{stored=JSON.parse(localStorage.getItem("candidatePins:"+area)||"[]")}catch(e){}
+    return [...(seeded[area]||[]),...stored];
+  }
+  function render(){
+    board.innerHTML=getPins().slice(0,6).map((p,i)=>`<article class="pin ${i>=3?"pin-new":""}"><h3>${p[0]}</h3><p>${p[1]||"A local idea submitted to the campaign."}</p><small>${p[2]||"Local resident"} · ${AREAS[area]?.name||"Bloggs Town"}</small></article>`).join("");
+  }
+  render();
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    const fd=new FormData(form);
+    const change=(fd.get("change")||"").toString().trim();
+    const name=(fd.get("name")||"Local resident").toString().trim()||"Local resident";
+    if(!change)return;
+    let stored=[];
+    try{stored=JSON.parse(localStorage.getItem("candidatePins:"+area)||"[]")}catch(err){}
+    stored.unshift([change,"Submitted for moderation.",name]);
+    try{localStorage.setItem("candidatePins:"+area,JSON.stringify(stored.slice(0,10)))}catch(err){}
+    form.reset();
+    render();
+  });
+}
+captureSource();initMobile();initAreas();initForms();initPreferences();initThanks();initQuickPolls();initCampaignBuilder();initPinboard();const area=getArea();if(area&&AREAS[area])applyArea(area);
 })();
